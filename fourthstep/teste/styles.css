@@ -2,7 +2,44 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+}
+
+.logo {
+    display: flex;
+    width: 40px;
+    height: 40px;
+}
+
+#nav-bar {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.nav-link {
+    margin: 0 15px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+a, li {
+    list-style: none;
+    text-decoration: none;
 }
 
