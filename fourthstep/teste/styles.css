@@ -1,55 +1,80 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+:root {
+    --green: hsl(158, 36%, 37%)
 }
 
-header {
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(32, 37%, 92%);
+}
+
+#header-img {
+    width: 300px;
+    object-fit: contain;
+}
+
+#nav-bar {
     display: flex;
-    top: 0;
-    min-height: 75px;
-    padding: 0px 20px;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: #eee;
-  }
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: white;
+    padding: 10px;
+}
+
+.nav-list  {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: rgb(99, 97, 97);
+    padding: 0 10px;
+}
 
 .logo {
     display: flex;
-    width: 40px;
-    height: 40px;
-}
-
-.nav-link {
-    margin: 0 60px;
-    color: black;
-    font-weight: bold;
-}
-
-.nav-list {
-    display: flex;
     align-items: center;
+}
+
+.email-section {
+    margin-top: 100px;
+}
+
+input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--green);
 
 }
 
-.nav-list ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
+#submit {
+    background-color: var(--green);
+    color: white;
+    cursor: pointer;
 }
 
-a, li {
-    list-style: none;
-    text-decoration: none;
+section::before {
+    display: block;
+    content: " ";
+    margin-top: -100px;
+    height: 100px;
+    visibility: hidden;
+    pointer-events: none;
 }
 
-.container {
-    max-width: 1000px;
-    width: 100%;
-    margin: 0 auto;
-  }
+section {
+    margin: 40px 20px;
+    text-align: center;
+}
 
 h2 {
-    text-align: center;
+    margin-bottom: 10px;
 }
