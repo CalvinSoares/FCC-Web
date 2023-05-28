@@ -2,10 +2,32 @@
     --neutral: #232944;
     --base-100: #ffff;
     --neutral-focus: #121629;
+    --primary: #eebbc3;
+    --secondary: #b8c1ec;
+    --accent: #d4d8f0;
 }
 
 * {
     margin: 0;
+}
+
+body {
+    font-family: 'Note Serif', sans-serif;
+    text-align: center;
+    background-color: var(--neutral);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins',sans-serif;
+}
+
+h1 {
+    font-size: 60px;
 }
 
 #nav-bar {
@@ -15,7 +37,7 @@
     top: 0;
     width: 100%;
     background-color: var(--neutral);
-    padding: 00px 0;
+    padding: 20px 0;
     font-size: 20px;
     border-bottom: 1px solid var(--neutral-focus);
 }
@@ -23,11 +45,97 @@
 .nav-links {
     display: flex;
     list-style: none;
-    font-family: serif;
+
 }
 
 .nav-links a {
     padding: 0 10px;;
     text-decoration:  none;
     color: var(--base-100);
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 70px 0;
+    min-height: 100vh;
+}
+
+#welcome-section {
+    background-color: var(--neutral);
+    color: var(--base-100);
+    display: flex;
+    flex-direction: column;
+}
+
+#welcome-section h1 {
+    margin-top: 30vh;
+}
+#welcome-section p {
+    color: var(--primary);
+    font-size: 25px;
+    margin: 25px 0;
+    font-style: italic;
+}
+
+#projects {
+    background-color: var(--secondary);
+    color: var(--neutral);
+}
+
+#projects h1 {
+    border-bottom: 5px solid var(--neutral);
+    width: fit-content;
+    margin: auto;
+}
+
+#projects .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    place-items: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+
+#projects .projects-title {
+    height: 525px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--neutral);
+    text-decoration: none;
+    color: var(--accent);
+    border-radius: 5px;
+    box-shadow: 8px 8px 10px 5px rgba(100, 100, 100, 0.3);
+    
+}
+
+#projects .projects-title img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#projects .projects-title p {
+    font-size: 25px;
+    padding: 10px;
+}
+
+#projects .projects-title span {
+    opacity: 0%;
+    padding: 0 5px;
+}
+
+#projects .projects-title:hover span {
+    opacity: 100%;
+    color: var(--primary);
+    transition: opacity 0.25s ease-in;
 }
