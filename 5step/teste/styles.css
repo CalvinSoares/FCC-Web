@@ -50,7 +50,7 @@ h1 {
 }
 
 .nav-links a {
-    padding: 0 10px;;
+    padding: 0 10px;
     text-decoration:  none;
     color: var(--base-100);
 }
